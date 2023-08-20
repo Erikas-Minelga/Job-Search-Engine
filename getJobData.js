@@ -4,9 +4,9 @@ const options =
    headers: 
    {
     'content-type': 'application/octet-stream',
-    'X-RapidAPI-Key': 'c6dc6bfb59msh7168572e9f366cdp15f930jsn5f5ca1397bfb',
-    'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
-   } 
+    'X-RapidAPI-Key': 'KEY',
+    'X-RapidAPI-Host': 'HOST'
+   }  //Key and host ommitted due to being sensitive data
 };
 
 async function getJobData(url)

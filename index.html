@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/c21c445645.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Job Search Engine</title>
+    </head>
+    <body>
+        <div class="page-loader hidden">
+            <h2>Loading...</h2>
+            <div class="flex-row spinner-holder page-spinner">
+                <div class="loading-spinner"></div>
+            </div>
+            <h2>Please wait</h2>
+            <h2>Make sure to allow location permissions</h2>
+        </div>
+        <div class="page">
+            <div class="header">
+                <div class="header-section">
+                    <h1>Enter your skills</h1>
+                    <h2 class="hidden">You can enter things like: "accounting", "html", "c++" and so on.</h2>
+                    <div class="skill-entry flex-row">
+                        <input type="text" maxlength="16">
+                        <button id="add-skill" onclick="addSkill()">Add Skill</button>
+                    </div>
+                    <p class="error hidden"></p>
+                </div>
+                <div class="header-section hidden">
+                    <h2>You can also use Space to add skills</h2>
+                    <h2>Once you are happy with skills entered, Press Enter or the button below to search (You can always refine the search later)</h2>
+                </div>
+                <div class="header-section">
+                    <h2>Your skills</h2>
+                    <ul></ul>
+                    <div class="search-btn-holder flex-row">
+                        <button id="start-search" onclick="searchJobs()">Search</button>
+                    </div>
+                    <p class="error hidden"></p>
+                </div>
+                <div class="header-section">
+                    <h2>Filters</h2>
+                    <div class="filter-options flex-row">
+                        <div class="filter-option">
+                            <label for="remote">Remote only?</label>
+                            <input type="checkbox" id="remote">
+                        </div>
+                        <div class="filter-option">
+                            <label for="fulltime">Full-time only?</label>
+                            <input type="checkbox" id="fulltime">
+                        </div>
+                        <div class="filter-option">
+                            <label for="minSalary">Minimum Salary:</label>
+                            <select class="form-select" id="minSalary" name="salary-min">
+                                <option value="any">Any</option>
+                                <option value="15000">Up to 15,000</option>
+                                <option value="20000">20,000</option>
+                                <option value="25000">25,000</option>
+                                <option value="30000">30,000</option>
+                                <option value="35000">35,000</option>
+                                <option value="40000">40,000</option>
+                                <option value="45000">45,000</option>
+                                <option value="50000">50,000</option>
+                                <option value="55000">55,000</option>
+                                <option value="60000">60,000</option>
+                                <option value="65000">65,000</option>
+                                <option value="70000">70,000 and up</option>
+                            </select>               
+                        </div>
+                        <div class="filter-option">
+                            <label for="maxSalary">Maximum Salary:</label>
+                            <select class="form-select" id="maxSalary" name="salary-max">
+                                <option value="any">Any</option>
+                                <option value="15000">Up to 15,000</option>
+                                <option value="20000">20,000</option>
+                                <option value="25000">25,000</option>
+                                <option value="30000">30,000</option>
+                                <option value="35000">35,000</option>
+                                <option value="40000">40,000</option>
+                                <option value="45000">45,000</option>
+                                <option value="50000">50,000</option>
+                                <option value="55000">55,000</option>
+                                <option value="60000">60,000</option>
+                                <option value="65000">65,000</option>
+                                <option value="70000">70,000 and up</option>
+                            </select>
+                        </div>
+                        <div class="filter-option">
+                            <label for="competitive">Exclude Competitive Salaries?</label>
+                            <input type="checkbox" id="noCompetitive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="search-results"></div>
+                <div class="flex-row spinner-holder search-spinner hidden">
+                    <div class="loading-spinner"></div>
+                </div>
+                <p class="error hidden"></p>
+                <div class="credit-holder">
+                    <a href="https://www.flaticon.com/free-icons/job" title="job icons">Job icons created by feen - Flaticon</a>
+                </div>
+            </div>
+        </div>
+        <script src="getJobData.js"></script>
+        <script src="getCountry.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
+
+
+<!-- Credits and attributions (add to the footer later)-->
+<!-- <a href="https://www.flaticon.com/free-icons/job" title="job icons">Job icons created by feen - Flaticon</a> -->

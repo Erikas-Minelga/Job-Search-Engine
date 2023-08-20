@@ -20,7 +20,7 @@ if(country === null)
     navigator.geolocation.getCurrentPosition(position => {
         const lat = position.coords.latitude;
         const long = position.coords.longitude;
-        const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=AIzaSyBJd_EAZ67zvLBRquEeuFrayjgV6u2MP-Q`;
+        const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=KEY`;    //Key omitted due to it being sensitive data
     
         getCountry(url).then(response => {
             country = response;

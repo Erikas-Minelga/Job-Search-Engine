@@ -6,7 +6,7 @@ const options =
     'content-type': 'application/octet-stream',
     'X-RapidAPI-Key': 'KEY',
     'X-RapidAPI-Host': 'HOST'
-   }  //Key and host ommitted due to being sensitive data
+   }  //Key and host omitted due to being sensitive data
 };
 
 async function getJobData(url)

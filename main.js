@@ -8,8 +8,6 @@ const checkBoxes = document.querySelectorAll("input");
 const salaryDropDowns = document.querySelectorAll("select:not(#country)");
 const resultsSpinner = document.querySelector(".search-spinner");
 const errorElements = document.querySelectorAll(".error");
-// const addSkillButton = document.querySelector("#add-skill");
-// const searchButton = document.querySelector("#start-search");
 
 let pageNumber = localStorage.getItem("page") ? localStorage.getItem("page") : 1;
 let country = localStorage.getItem("country");
